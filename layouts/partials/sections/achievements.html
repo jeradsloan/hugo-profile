@@ -11,6 +11,9 @@
                         <div class="card-body bg-transparent">
                             <h5 class="card-title bg-transparent">{{ .title }}</h5>
                             <div class="card-text secondary-font">
+                                {{ if .image }}
+                                  <img src="{{ .image }}" class="rounded img-fluid" alt="{{ .title }}">
+                                {{ end }}
                                 {{ .content }}
                             </div>
                         </div>
@@ -22,6 +25,9 @@
                         <div class="card-body bg-transparent">
                             <h5 class="card-title bg-transparent">{{ .title }}</h5>
                             <div class="card-text secondary-font">
+                                {{ if .image }}
+                                <img src="{{ .image }}" class="rounded img-fluid" alt="{{ .title }}">
+                                {{ end }}
                                 {{ .content }}
                             </div>
                         </div>
