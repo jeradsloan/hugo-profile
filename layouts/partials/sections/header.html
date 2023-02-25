@@ -59,7 +59,6 @@
                             </div>
                         </li>
                     {{ end }}
-
                     {{ if and (.Site.Params.about.enable | default false) (not (.Site.Params.navbar.menus.disableAbout | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#about" aria-label="about">
@@ -114,6 +113,11 @@
                     {{ end }}
 
                     <!-- custom menus from the user -->
+                    <li class="nav-item navbar-text">
+                      <a class="nav-link">
+                       <i>watch now on:</i>
+                      </a>
+                    </li>
                     {{ range .Site.Menus.main }}
                     {{ if .HasChildren }}
                     <!-- Dropdown menu -->
